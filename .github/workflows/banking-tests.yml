@@ -128,4 +128,5 @@ jobs:
         fi
     
     - name: Log Test Status
-      run: echo "🏦 Banking QA Test Suite Status: ${{ env.STATUS }}"
+      run: |
+        echo "Test Suite Status: ${{ env.STATUS }}"
