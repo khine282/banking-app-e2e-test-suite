@@ -1,6 +1,7 @@
 package com.dbs.banking;
 
 import com.dbs.banking.pages.LoginPage;
+import com.dbs.banking.BaseTest;
 import com.dbs.banking.pages.DashboardPage;
 import com.dbs.banking.pages.TransferPage;
 import org.testng.annotations.Test;
@@ -19,11 +20,11 @@ public class TransferTests extends BaseTest {
         DashboardPage dashboard = new DashboardPage(driver);
         assertThat(dashboard.isDashboardDisplayed()).isTrue();
         
-        dashboard.clickTransfer();
+        dashboard.clickTransferFunds();
         
         TransferPage transferPage = new TransferPage(driver);
-        transferPage.selectFromAccount("13455");
-        transferPage.selectToAccount("13456");
+        transferPage.selectFromAccount("12345");
+        transferPage.selectToAccount("12456");
         transferPage.enterAmount(100);
         transferPage.submitTransfer();
         
@@ -40,11 +41,11 @@ public class TransferTests extends BaseTest {
         loginPage.login("john", "demo");
         
         DashboardPage dashboard = new DashboardPage(driver);
-        dashboard.clickTransfer();
+        dashboard.clickTransferFunds();
         
         TransferPage transferPage = new TransferPage(driver);
-        transferPage.selectFromAccount("13455");
-        transferPage.selectToAccount("13456");
+        transferPage.selectFromAccount("12345");
+        transferPage.selectToAccount("12456");
         transferPage.enterAmount(999999);
         transferPage.submitTransfer();
         
@@ -61,11 +62,11 @@ public class TransferTests extends BaseTest {
         loginPage.login("john", "demo");
         
         DashboardPage dashboard = new DashboardPage(driver);
-        dashboard.clickTransfer();
+        dashboard.clickTransferFunds();
         
         TransferPage transferPage = new TransferPage(driver);
-        transferPage.selectFromAccount("13455");
-        transferPage.selectToAccount("99999");
+        transferPage.selectFromAccount("12345");
+        transferPage.selectToAccount("12456");
         transferPage.enterAmount(100);
         transferPage.submitTransfer();
         
@@ -82,11 +83,11 @@ public class TransferTests extends BaseTest {
         loginPage.login("john", "demo");
         
         DashboardPage dashboard = new DashboardPage(driver);
-        dashboard.clickTransfer();
+        dashboard.clickTransferFunds();
         
         TransferPage transferPage = new TransferPage(driver);
-        transferPage.selectFromAccount("13455");
-        transferPage.selectToAccount("13456");
+        transferPage.selectFromAccount("12345");
+        transferPage.selectToAccount("12456");
         transferPage.enterAmount(10.50);
         transferPage.submitTransfer();
         
