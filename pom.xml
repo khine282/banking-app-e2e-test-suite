@@ -28,11 +28,11 @@
             <version>4.15.0</version>
         </dependency>
 
-        <!-- WebDriverManager -->
+        <!-- WebDriverManager (FIXED VERSION) -->
         <dependency>
             <groupId>io.github.bonigarcia</groupId>
             <artifactId>webdrivermanager</artifactId>
-            <version>5.8.3</version>
+            <version>5.6.3</version>
         </dependency>
 
         <!-- REST Assured -->
@@ -64,7 +64,7 @@
             <version>2.0.10</version>
         </dependency>
 
-        <!-- Logback (SLF4J Implementation) -->
+        <!-- Logback -->
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
