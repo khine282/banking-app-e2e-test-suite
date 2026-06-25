@@ -6,13 +6,13 @@
 [![TestNG 7.9](https://img.shields.io/badge/TestNG-7.9-yellowgreen)](https://testng.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**A professional, entry-level QA automation framework for banking applications. Designed to demonstrate QA engineering competency for roles like DBS Asia Hub's Analyst, Quality Assurance Engineer position.**
+**A professional, entry-level QA automation framework for banking applications. Designed to demonstrate QA engineering competency for roles like ParaBank Asia Hub's Analyst, Quality Assurance Engineer position.**
 
 ---
 
 ## 🎯 Project Purpose
 
-This project showcases **test case design, test automation, defect management, and CI/CD proficiency**—the exact skills DBS is looking for in their QA engineer hiring.
+This project showcases **test case design, test automation, defect management, and CI/CD proficiency**—the exact skills ParaBank is looking for in their QA engineer hiring.
 
 Rather than a generic test suite, this framework demonstrates:
 - ✅ **Banking domain knowledge**: Transfer limits, balance verification, secure authentication
@@ -25,14 +25,14 @@ Rather than a generic test suite, this framework demonstrates:
 
 ---
 
-## 🏗️ How This Aligns with DBS Job Requirements
+## 🏗️ How This Aligns with ParaBank Job Requirements
 
 ### ✅ "Test Case Design & Execution"
 **Our approach:**
 - `/test-artifacts/TEST_PLAN.md` — Comprehensive test plan for fund transfer feature
 - `/test-artifacts/TEST_CASES.md` — 14 detailed test cases with preconditions and expected results
 - Tests cover: Functional, Negative, Edge Cases, Regression
-- **Proof**: DBS will see test documentation before code
+- **Proof**: ParaBank will see test documentation before code
 
 ### ✅ "Test Automation (Selenium, JUnit/TestNG)"
 **Our approach:**
@@ -113,7 +113,7 @@ banking-app-e2e-test-suite/
 │   └── workflows/
 │       └── run-tests.yml              ← GitHub Actions CI/CD
 │
-├── src/main/java/com/dbs/banking/
+├── src/main/java/com/ParaBank/banking/
 │   ├── config/
 │   │   └── WebDriverConfig.java       ← Selenium configuration
 │   ├── pages/
@@ -124,7 +124,7 @@ banking-app-e2e-test-suite/
 │   └── resources/
 │       └── application.yml            ← Config file
 │
-└── src/test/java/com/dbs/banking/
+└── src/test/java/com/ParaBank/banking/
     ├── BaseTest.java                  ← Test setup/teardown
     ├── LoginTests.java                ← 4 login test cases
     ├── TransferTests.java             ← 5 transfer test cases
@@ -286,7 +286,7 @@ Unlike production banking systems, ParaBank accepts:
 
 ### What Production Banking Would Reject
 
-A real DBS system would:
+A real ParaBank system would:
 - Block same-account transfers
 - Prevent insufficient balance transfers
 - Enforce daily limits
@@ -308,7 +308,7 @@ public void testInsufficientBalance() {
 }
 ```
 
-**Why this matters for DBS:**
+**Why this matters for ParaBank:**
 - Shows understanding of banking constraints
 - Framework is ready for production systems with real validation
 - Demonstrates QA thinking: "What SHOULD happen vs. what demo site does"
@@ -378,7 +378,7 @@ Tests execute with pauses for demos
 
 ---
 
-## 🎓 What DBS Hiring Managers See
+## 🎓 What ParaBank Hiring Managers See
 
 | Skill | Evidence | Assessment |
 |-------|----------|-----------|
@@ -406,13 +406,13 @@ Tests execute with pauses for demos
 "I document issues professionally with reproduction steps and business impact (see ISSUES.md)."
 
 ### 4. Framework Readiness
-"The framework works on ParaBank now, but scales to DBS's production system complexity."
+"The framework works on ParaBank now, but scales to ParaBank's production system complexity."
 
 ### 5. CI/CD Understanding
 "Every code change triggers automated testing 24/7, preventing regression before production."
 
 ### 6. Day One Approach
-"I'd review DBS requirements, design test plans around regulatory constraints, then scale this framework for production."
+"I'd review ParaBank requirements, design test plans around regulatory constraints, then scale this framework for production."
 
 ---
 

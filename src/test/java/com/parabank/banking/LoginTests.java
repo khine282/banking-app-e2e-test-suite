@@ -1,7 +1,7 @@
-package com.dbs.banking;
+package com.parabank.banking;
 
-import com.dbs.banking.pages.LoginPage;
-import com.dbs.banking.pages.DashboardPage;
+import com.parabank.banking.pages.LoginPage;
+import com.parabank.banking.pages.DashboardPage;
 import org.testng.annotations.Test;
 import static org.assertj.core.api.Assertions.*;
 

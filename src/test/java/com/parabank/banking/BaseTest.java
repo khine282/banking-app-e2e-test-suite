@@ -1,6 +1,6 @@
-package com.dbs.banking;
+package com.parabank.banking;
 
-import com.dbs.banking.config.WebDriverConfig;
+import com.parabank.banking.config.WebDriverConfig;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;

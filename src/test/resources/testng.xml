@@ -4,19 +4,19 @@
 
     <test name="Login Tests" enabled="true">
         <classes>
-            <class name="com.dbs.banking.LoginTests"/>
+            <class name="com.parabank.banking.LoginTests"/>
         </classes>
     </test>
 
     <test name="Transfer Tests" enabled="true">
         <classes>
-            <class name="com.dbs.banking.TransferTests"/>
+            <class name="com.parabank.banking.TransferTests"/>
         </classes>
     </test>
 
     <test name="Regression Tests" enabled="true">
         <classes>
-            <class name="com.dbs.banking.RegressionTests"/>
+            <class name="com.parabank.banking.RegressionTests"/>
         </classes>
     </test>
 

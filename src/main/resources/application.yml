@@ -18,5 +18,5 @@
    logging:
      level:
        root: INFO
-       com.dbs.banking: DEBUG
+       com.parabank: DEBUG
    "@ | Out-File -Encoding UTF8 "src\main\resources\application.yml"

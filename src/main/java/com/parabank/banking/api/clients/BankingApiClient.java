@@ -1,4 +1,4 @@
-package com.dbs.banking.api.clients;
+package com.parabank.banking.api.clients;
 
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;

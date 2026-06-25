@@ -5,13 +5,13 @@
          http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.dbs.banking</groupId>
+    <groupId>com.parabank</groupId>
     <artifactId>banking-app-e2e-test-suite</artifactId>
     <version>1.0.0</version>
     <packaging>jar</packaging>
 
     <name>Banking QA Automation Suite</name>
-    <description>DBS-Ready End-to-End Test Automation Framework</description>
+    <description>ParaBank-Ready End-to-End Test Automation Framework</description>
 
     <properties>
         <java.version>17</java.version>

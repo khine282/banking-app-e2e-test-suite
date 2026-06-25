@@ -1,4 +1,4 @@
-package com.dbs.banking.config;
+package com.parabank.banking.config;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.chrome.ChromeDriver;

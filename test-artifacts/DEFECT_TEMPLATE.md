@@ -202,9 +202,9 @@ Resolution Target: 2024-01-22
 
 ---
 
-## How DBS Evaluates Defect Management
+## How ParaBank Evaluates Defect Management
 
-**DBS will assess:**
+**ParaBank will assess:**
 
 1. **Clarity**: Is the defect understandable? Can someone reproduce it?
    - ✅ Clear steps to reproduce
@@ -293,7 +293,7 @@ transferPage.transfer("ACC001", "ACC002", 10.50);
 Backend using Integer instead of BigDecimal for amounts.
 ```
 
-This format impresses DBS because:
+This format impresses ParaBank because:
 - ✅ Professional documentation
 - ✅ Clear reproduction steps
 - ✅ Evidence (screenshot)

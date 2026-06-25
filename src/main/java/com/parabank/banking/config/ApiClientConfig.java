@@ -1,4 +1,4 @@
-package com.dbs.banking.config;
+package com.parabank.banking.config;
 
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;

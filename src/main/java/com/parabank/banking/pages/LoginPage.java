@@ -1,4 +1,4 @@
-package com.dbs.banking.pages;
+package com.parabank.banking.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -9,7 +9,7 @@ public class LoginPage extends BasePage {
     private static final Logger logger = LoggerFactory.getLogger(LoginPage.class);
 
     // Locators - UPDATED
-    private By usernameField = By.name("username");      // ✅ Changed from By.id
+    private By usernameField = By.name("username");      
     private By passwordField = By.name("password");      // ✅ Changed from By.id
     private By loginButton = By.xpath("//input[@value='Log In']");
     private By errorMessage = By.className("error");

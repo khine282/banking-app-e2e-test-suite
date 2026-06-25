@@ -1,4 +1,4 @@
-package com.dbs.banking.api.payloads;
+package com.parabank.banking.api.payloads;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 

@@ -1,4 +1,4 @@
-package com.dbs.banking.pages;
+package com.parabank.banking.pages;
 
 import java.util.List;
 

@@ -335,9 +335,9 @@ Users don't know how much they can transfer
 
 ---
 
-## How This Demonstrates QA Excellence for DBS
+## How This Demonstrates QA Excellence for ParaBank
 
-This `ISSUES.md` file shows DBS that you:
+This `ISSUES.md` file shows ParaBank that you:
 
 ✅ **Find Real Defects**: Not test cases that artificially pass  
 ✅ **Document Clearly**: Each issue has steps to reproduce and evidence  
@@ -347,4 +347,4 @@ This `ISSUES.md` file shows DBS that you:
 ✅ **Track Professionally**: Severity levels, status tracking  
 ✅ **Think Like QA**: Edge cases that developers miss  
 
-This is exactly what DBS hiring managers expect to see.
+This is exactly what ParaBank hiring managers expect to see.
