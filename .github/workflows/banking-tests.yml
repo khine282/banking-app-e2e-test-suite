@@ -46,21 +46,21 @@ jobs:
     
     - name: Upload Allure Results
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: allure-results
         path: target/allure-results
     
     - name: Upload Test Reports
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-reports
         path: target/surefire-reports
     
     - name: Upload Screenshots on Failure
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: failure-screenshots
         path: target/screenshots
@@ -68,7 +68,7 @@ jobs:
     - name: Test Summary
       if: always()
       run: |
-        echo "🏦 Banking QA Test Suite Execution Complete"
+        echo "Banking QA Test Suite Execution Complete"
         echo "Tests run and results uploaded as artifacts"
         if [ -f target/surefire-reports/index.html ]; then
           echo "✅ Full test report available in artifacts"
@@ -98,7 +98,7 @@ jobs:
     
     steps:
     - name: Download Allure Results
-      uses: actions/download-artifact@v3
+      uses: actions/download-artifact@v4
       with:
         name: allure-results
         path: allure-results
