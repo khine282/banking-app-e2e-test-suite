@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 // ==================== Login Request/Response ====================
 
-public class LoginRequest {
+class LoginRequest {
     private String username;
     private String password;
 
@@ -50,8 +50,6 @@ class LoginResponse {
     }
 }
 
-// ==================== Account Balance ====================
-
 class AccountBalance {
     @JsonProperty("account_id")
     private String accountId;
@@ -68,8 +66,6 @@ class AccountBalance {
     public String getCurrency() { return currency; }
     public void setCurrency(String currency) { this.currency = currency; }
 }
-
-// ==================== Transfer Request/Response ====================
 
 class TransferRequest {
     @JsonProperty("fromAccountId")
@@ -115,8 +111,6 @@ class TransferResponse {
         return "TransferResponse{transactionId='" + transactionId + "', status='" + status + "', amount=" + amount + "}";
     }
 }
-
-// ==================== Transaction ====================
 
 class Transaction {
     @JsonProperty("transaction_id")
