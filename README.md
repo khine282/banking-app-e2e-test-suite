@@ -6,13 +6,13 @@
 [![TestNG 7.9](https://img.shields.io/badge/TestNG-7.9-yellowgreen)](https://testng.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**A professional, entry-level QA automation framework for banking applications. Designed to demonstrate QA engineering competency for roles like ParaBank Asia Hub's Analyst, Quality Assurance Engineer position.**
+**A professional, entry-level QA automation framework for banking applications. Designed to demonstrate QA engineering competency targeting banking and financial services roles.**
 
 ---
 
 ## 🎯 Project Purpose
 
-This project showcases **test case design, test automation, defect management, and CI/CD proficiency**—the exact skills ParaBank is looking for in their QA engineer hiring.
+This project showcases **test case design, test automation, defect management, and CI/CD proficiency**—the core skills banking institutions look for in QA engineers.
 
 Rather than a generic test suite, this framework demonstrates:
 - ✅ **Banking domain knowledge**: Transfer limits, balance verification, secure authentication
@@ -25,14 +25,14 @@ Rather than a generic test suite, this framework demonstrates:
 
 ---
 
-## 🏗️ How This Aligns with ParaBank Job Requirements
+## 🏗️ Banking QA Engineering Competencies Demonstrated
 
 ### ✅ "Test Case Design & Execution"
 **Our approach:**
 - `/test-artifacts/TEST_PLAN.md` — Comprehensive test plan for fund transfer feature
 - `/test-artifacts/TEST_CASES.md` — 14 detailed test cases with preconditions and expected results
 - Tests cover: Functional, Negative, Edge Cases, Regression
-- **Proof**: ParaBank will see test documentation before code
+- **Proof**: Professional test documentation before implementation
 
 ### ✅ "Test Automation (Selenium, JUnit/TestNG)"
 **Our approach:**
@@ -44,8 +44,8 @@ Rather than a generic test suite, this framework demonstrates:
 ### ✅ "Defect Management (JIRA-style tracking)"
 **Our approach:**
 - `ISSUES.md` — Professional defect reports with JIRA structure
-- Includes: Summary, Steps to Reproduce, Expected vs Actual, Screenshots, Root Cause
-- **5 real defects** documented (double-click transfers, decimal amount errors, etc.)
+- Includes: Summary, Steps to Reproduce, Expected vs Actual, Root Cause
+- **5 real defects** documented (decimal precision, validation gaps, UX improvements)
 - Each defect shows: Severity, Impact, Test Case linkage, Acceptance Criteria
 
 ### ✅ "CI/CD & Continuous Testing"
@@ -75,7 +75,7 @@ Rather than a generic test suite, this framework demonstrates:
 | **Regression** | ✓ Consistency | — | — | ✓ 2 tests | Dynamic |
 | **TOTAL** | **5 tests** | **3 tests** | **3 tests** | **12 tests** | **Smart Selection** |
 
-*ParaBank demo allows insufficient balance transfers (production would reject)
+*Demo site allows insufficient balance transfers (production banking would reject)
 
 ---
 
@@ -113,7 +113,7 @@ banking-app-e2e-test-suite/
 │   └── workflows/
 │       └── run-tests.yml              ← GitHub Actions CI/CD
 │
-├── src/main/java/com/ParaBank/banking/
+├── src/main/java/com/parabank/banking/
 │   ├── config/
 │   │   └── WebDriverConfig.java       ← Selenium configuration
 │   ├── pages/
@@ -124,7 +124,7 @@ banking-app-e2e-test-suite/
 │   └── resources/
 │       └── application.yml            ← Config file
 │
-└── src/test/java/com/ParaBank/banking/
+└── src/test/java/com/parabank/banking/
     ├── BaseTest.java                  ← Test setup/teardown
     ├── LoginTests.java                ← 4 login test cases
     ├── TransferTests.java             ← 5 transfer test cases
@@ -274,11 +274,11 @@ Given accounts:
 
 ---
 
-## ⚠️ ParaBank Demo Site - Validation Behavior
+## ⚠️ Demo Site - Validation Behavior Notes
 
-### What ParaBank ALLOWS
+### What Demo Site ALLOWS
 
-Unlike production banking systems, ParaBank accepts:
+Unlike production banking systems, this demo site accepts:
 - Transfers to the SAME account
 - Transfers with insufficient balance (shows negative balance)
 - Huge transfer amounts without validation
@@ -286,7 +286,7 @@ Unlike production banking systems, ParaBank accepts:
 
 ### What Production Banking Would Reject
 
-A real ParaBank system would:
+A real banking system would:
 - Block same-account transfers
 - Prevent insufficient balance transfers
 - Enforce daily limits
@@ -294,7 +294,7 @@ A real ParaBank system would:
 
 ### Test Design Implication
 
-Our **TC_003 (Insufficient Balance)** and **TC_004 (Invalid Recipient)** are designed to trigger errors, but ParaBank doesn't enforce validation.
+Our **TC_003 (Insufficient Balance)** and **TC_004 (Invalid Recipient)** are designed to trigger errors, but the demo site doesn't enforce validation.
 
 ```java
 @Test(description = "TC_003: Insufficient balance error")
@@ -303,12 +303,12 @@ public void testInsufficientBalance() {
     transferPage.enterAmount(999999999);
     transferPage.submitTransfer();
     
-    // ParaBank allows it, so we accept either outcome
+    // Demo site allows it, so we accept either outcome
     assertThat(isError || isSuccess).isTrue();
 }
 ```
 
-**Why this matters for ParaBank:**
+**Why this matters for banking QA:**
 - Shows understanding of banking constraints
 - Framework is ready for production systems with real validation
 - Demonstrates QA thinking: "What SHOULD happen vs. what demo site does"
@@ -378,7 +378,7 @@ Tests execute with pauses for demos
 
 ---
 
-## 🎓 What ParaBank Hiring Managers See
+## 🎓 What Banking QA Hiring Managers See
 
 | Skill | Evidence | Assessment |
 |-------|----------|-----------|
@@ -406,13 +406,13 @@ Tests execute with pauses for demos
 "I document issues professionally with reproduction steps and business impact (see ISSUES.md)."
 
 ### 4. Framework Readiness
-"The framework works on ParaBank now, but scales to ParaBank's production system complexity."
+"The framework works on demo sites now, but scales to production banking systems with complex validation."
 
 ### 5. CI/CD Understanding
 "Every code change triggers automated testing 24/7, preventing regression before production."
 
 ### 6. Day One Approach
-"I'd review ParaBank requirements, design test plans around regulatory constraints, then scale this framework for production."
+"I'd review requirements, design test plans around regulatory constraints, then scale this framework for production systems."
 
 ---
 

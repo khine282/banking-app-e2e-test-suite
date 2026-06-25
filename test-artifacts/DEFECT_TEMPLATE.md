@@ -110,7 +110,7 @@ Rationale:
 
 
 ========================================
-ROOT CAUSE (Development to fill)
+ROOT CAUSE (Analysis)
 ========================================
 [Developer analysis - optional for QA to suggest]
 
@@ -151,7 +151,7 @@ ADDITIONAL NOTES
 DEFECT HISTORY
 ========================================
 Status: Open
-Found By: Kai Zar Thwe (QA)
+Found By: QA Engineer
 Found Date: 2024-01-15
 Assigned To: [Developer Name]
 Resolution Target: 2024-01-22
@@ -202,9 +202,9 @@ Resolution Target: 2024-01-22
 
 ---
 
-## How ParaBank Evaluates Defect Management
+## How Banking Hiring Managers Evaluate Defect Management
 
-**ParaBank will assess:**
+**Organizations will assess:**
 
 1. **Clarity**: Is the defect understandable? Can someone reproduce it?
    - ✅ Clear steps to reproduce
@@ -293,7 +293,7 @@ transferPage.transfer("ACC001", "ACC002", 10.50);
 Backend using Integer instead of BigDecimal for amounts.
 ```
 
-This format impresses ParaBank because:
+This format impresses hiring managers because:
 - ✅ Professional documentation
 - ✅ Clear reproduction steps
 - ✅ Evidence (screenshot)
