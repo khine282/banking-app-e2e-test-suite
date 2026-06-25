@@ -33,9 +33,23 @@ public void selectToAccount(String accountId) {
 }
 
     public void enterAmount(double amount) {
-        logger.info("Entering amount: {}", amount);
-        type(amountField, String.valueOf(amount));
+    logger.info("Entering amount: {}", amount);
+    
+    // Wait for field to be clickable
+    WebElement element = waitForClickableElement(amountField);
+    
+    // Small pause
+    try {
+        Thread.sleep(300);
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
     }
+    
+    // Clear and type
+    element.clear();
+    element.sendKeys(String.valueOf(amount));
+    logger.info("Amount entered: {}", amount);
+}
 
     public void submitTransfer() {
         logger.info("Submitting transfer");
