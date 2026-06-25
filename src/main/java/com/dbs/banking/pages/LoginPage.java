@@ -8,9 +8,9 @@ import org.slf4j.LoggerFactory;
 public class LoginPage extends BasePage {
     private static final Logger logger = LoggerFactory.getLogger(LoginPage.class);
 
-    // Locators
-    private By usernameField = By.id("username");
-    private By passwordField = By.id("password");
+    // Locators - UPDATED
+    private By usernameField = By.name("username");      // ✅ Changed from By.id
+    private By passwordField = By.name("password");      // ✅ Changed from By.id
     private By loginButton = By.xpath("//input[@value='Log In']");
     private By errorMessage = By.className("error");
 
