@@ -23,18 +23,14 @@ public class TransferPage extends BasePage {
     }
 
     public void selectFromAccount(String accountId) {
-        logger.info("Selecting from account: {}", accountId);
-        WebElement dropdown = waitForElement(fromAccountDropdown);
-        Select select = new Select(dropdown);
-        select.selectByValue(accountId);
-    }
+    logger.info("Selecting from account: {}", accountId);
+    selectDropdownByValue(fromAccountDropdown, accountId);
+}
 
-    public void selectToAccount(String accountId) {
-        logger.info("Selecting to account: {}", accountId);
-        WebElement dropdown = waitForElement(toAccountDropdown);
-        Select select = new Select(dropdown);
-        select.selectByValue(accountId);
-    }
+public void selectToAccount(String accountId) {
+    logger.info("Selecting to account: {}", accountId);
+    selectDropdownByValue(toAccountDropdown, accountId);
+}
 
     public void enterAmount(double amount) {
         logger.info("Entering amount: {}", amount);

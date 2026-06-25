@@ -60,6 +60,20 @@ public class BasePage {
         driver.get(url);
     }
 
+    public void selectDropdownByValue(By locator, String value) {
+    logger.debug("Selecting dropdown value: {} from {}", value, locator);
+    WebElement element = waitForClickableElement(locator);
+    
+    try {
+        Thread.sleep(300);  // Wait for options to load
+    } catch (InterruptedException e) {
+        Thread.currentThread().interrupt();
+    }
+    
+    Select select = new Select(element);
+    select.selectByValue(value);
+}
+
     public String getCurrentUrl() {
         return driver.getCurrentUrl();
     }
