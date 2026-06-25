@@ -106,9 +106,9 @@ public class TransferTests extends BaseTest {
         dashboard.clickTransfer();
         
         TransferPage transferPage = new TransferPage(driver);
-        transferPage.selectFromAccount("13455");
-        transferPage.selectToAccount("13456");
-        transferPage.enterAmount(50);
+        transferPage.selectFromAccount("12345");
+        transferPage.selectToAccount("12456");
+        transferPage.enterAmount(100);
         transferPage.submitTransfer();
         
         assertThat(transferPage.isTransferSuccessful()).isTrue();

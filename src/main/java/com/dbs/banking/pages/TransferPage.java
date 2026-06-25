@@ -10,13 +10,13 @@ import org.slf4j.LoggerFactory;
 public class TransferPage extends BasePage {
     private static final Logger logger = LoggerFactory.getLogger(TransferPage.class);
 
-    // Locators
-    private By fromAccountDropdown = By.id("fromAccountId");
-    private By toAccountField = By.id("toAccountId");
-    private By amountField = By.id("amount");
-    private By submitButton = By.xpath("//input[@value='Transfer']");
-    private By successMessage = By.xpath("//div[@id='transfer_confirmation_table']");
-    private By errorMessage = By.className("error");
+    // Locators - CORRECTED
+    private By amountField = By.id("amount");                    // ✅ Correct
+    private By fromAccountDropdown = By.id("fromAccountId");     // ✅ Correct
+    private By toAccountDropdown = By.id("toAccountId");         // ✅ Correct (was text input, now dropdown!)
+    private By submitButton = By.xpath("//input[@type='submit'][@value='Transfer']");
+    private By successMessage = By.id("showResult");
+    private By errorMessage = By.xpath("//p[@class='error']");
 
     public TransferPage(WebDriver driver) {
         super(driver);
@@ -30,8 +30,10 @@ public class TransferPage extends BasePage {
     }
 
     public void selectToAccount(String accountId) {
-        logger.info("Entering to account: {}", accountId);
-        type(toAccountField, accountId);
+        logger.info("Selecting to account: {}", accountId);
+        WebElement dropdown = waitForElement(toAccountDropdown);
+        Select select = new Select(dropdown);
+        select.selectByValue(accountId);
     }
 
     public void enterAmount(double amount) {
@@ -56,7 +58,11 @@ public class TransferPage extends BasePage {
     }
 
     public boolean isErrorDisplayed() {
-        return isElementDisplayed(errorMessage);
+        try {
+            return waitForElement(errorMessage).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
     }
 
     public void performTransfer(String fromAccount, String toAccount, double amount) {
