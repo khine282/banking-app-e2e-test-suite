@@ -1,0 +1,12 @@
+target/
+.idea/
+.vscode/
+*.iml
+*.class
+*.jar
+allure-results/
+surefire-reports/
+.DS_Store
+*.log
+node_modules/
+build/
