@@ -153,7 +153,7 @@ banking-app-e2e-test-suite/
 
 ```bash
 # 1. Clone repository
-git clone https://github.com/yourusername/banking-app-e2e-test-suite.git
+git clone https://github.com/khine282/banking-app-e2e-test-suite.git
 cd banking-app-e2e-test-suite
 
 # 2. Install dependencies
