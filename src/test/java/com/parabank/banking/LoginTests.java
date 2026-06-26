@@ -20,7 +20,7 @@ public class LoginTests extends BaseTest {
         logger.info("TC_001 PASSED: Successful login");
     }
 
-    @Test(description = "TC_006: Invalid credentials error handling", enabled = false)
+    @Test(description = "TC_006: Invalid credentials error handling", enabled = false) // Disabled due to parabank issue
     public void testInvalidCredentials() {
         logger.info("Starting: Invalid credentials test");
         

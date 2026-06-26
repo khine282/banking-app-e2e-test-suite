@@ -13,19 +13,28 @@ public class WebDriverConfig {
 
     public static WebDriver getDriver() {
         logger.info("Initializing WebDriver");
-        
+
         WebDriverManager.chromedriver().setup();
-        
+
         ChromeOptions options = new ChromeOptions();
-        options.addArguments("--start-maximized");
+        if (System.getenv("GITHUB_ACTIONS") != null) {
+            logger.info("Running in GitHub Actions - using headless Chrome");
+            options.addArguments("--headless=new");
+            options.addArguments("--window-size=1920,1080");
+            options.addArguments("--disable-gpu");
+        } else {
+            logger.info("Running locally");
+            options.addArguments("--start-maximized");
+        }
+
         options.addArguments("--disable-notifications");
         options.addArguments("--no-sandbox");
         options.addArguments("--disable-dev-shm-usage");
-        
+
         WebDriver driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-        
+
         logger.info("WebDriver initialized successfully");
         return driver;
     }
