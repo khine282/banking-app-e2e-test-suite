@@ -134,20 +134,26 @@ jobs:
           name: allure-results
           path: allure-results
 
+    # ===== DEBUG STEP 1 =====
+      - name: Show Allure Maven Plugin Version
+        run: mvn help:effective-pom | grep -A5 "allure-maven"
+
+    # ===== GENERATE REPORT =====
       - name: Generate Allure Report
         run: mvn allure:report
 
-      - name: Verify Generated Report
+    # ===== DEBUG STEP 2 =====
+      - name: Inspect Generated Report
         run: |
-          ls -la target/site/allure-maven-plugin
-          test -f target/site/allure-maven-plugin/index.html
+          echo "=== target/site ==="
+          find target/site -maxdepth 3 -type f
 
+    # ===== PUBLISH =====
       - name: Publish Allure Report to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: target/site/allure-maven-plugin
-
           
   notify:
     runs-on: ubuntu-latest
