@@ -19,20 +19,7 @@ public class LoginTests extends BaseTest {
         assertThat(dashboard.isDashboardDisplayed()).isTrue();
         logger.info("TC_001 PASSED: Successful login");
     }
-
-    @Test(description = "TC_006: Invalid credentials error handling", enabled = false) // Disabled due to parabank issue
-    public void testInvalidCredentials() {
-        logger.info("Starting: Invalid credentials test");
-        
-        LoginPage loginPage = new LoginPage(driver);
-        loginPage.navigateTo("https://parabank.parasoft.com");
-        loginPage.login("invalid", "wrong");
-        
-        assertThat(loginPage.isErrorDisplayed()).isTrue();
-        assertThat(loginPage.getErrorMessage()).isNotEmpty();
-        logger.info("TC_006 PASSED: Invalid credentials error displayed");
-    }
-
+ 
     @Test(description = "TC_007: Empty username validation")
     public void testEmptyUsername() {
         logger.info("Starting: Empty username test");

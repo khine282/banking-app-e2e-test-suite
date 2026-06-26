@@ -76,11 +76,11 @@ Rather than a generic test suite, this framework demonstrates:
 
 | Feature | Functional | Negative | Edge Case | Automation | Account Strategy |
 |---------|-----------|----------|-----------|-----------|-----------------|
-| **Login & Authentication** | ✓ Valid creds | ✓ Invalid creds | ✓ Empty fields | ✓ 4 tests | Static |
+| **Login & Authentication** | ✓ Valid creds | — | ✓ Empty fields | ✓ 3 tests | Static |
 | **Fund Transfer** | ✓ Success | ✓ Insufficient* | ✓ Decimal amounts | ✓ 5 tests | **Dynamic (High→Low)** |
 | **Balance Inquiry** | ✓ Display | ✓ Not found | ✓ Large amounts | ✓ 2 tests | Dynamic |
 | **Regression** | ✓ Consistency | — | — | ✓ 2 tests | Dynamic |
-| **TOTAL** | **5 tests** | **3 tests** | **3 tests** | **12 tests** | **Smart Selection** |
+| **TOTAL** | **5 tests** | **2 tests** | **3 tests** | **11 tests** | **Smart Selection** |
 
 *Demo site allows insufficient balance transfers (production banking would reject)
 
@@ -168,7 +168,7 @@ mvn allure:serve
 
 ### Expected Output
 ```
-[INFO] Tests run: 12, Failures: 0, Skipped: 0
+[INFO] Tests run: 11, Failures: 0, Skipped: 0
 [INFO] 
 [INFO] BUILD SUCCESS
 ```
