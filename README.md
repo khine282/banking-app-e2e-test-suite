@@ -48,13 +48,20 @@ Rather than a generic test suite, this framework demonstrates:
 - **5 real defects** documented (decimal precision, validation gaps, UX improvements)
 - Each defect shows: Severity, Impact, Test Case linkage, Acceptance Criteria
 
-### ✅ "CI/CD & Continuous Testing"
+### ✅ CI/CD & Continuous Testing
+
 **Our approach:**
-- `.github/workflows/run-tests.yml` — GitHub Actions pipeline
+- `.github/workflows/banking-tests.yml` — GitHub Actions pipeline
 - Runs on: Every push to main/develop branches
 - **Green badge** in README proves tests passing
 - Auto-generates Allure reports
 - **Demonstrates**: Understanding of modern testing workflows
+
+**Real CI/CD Challenge & Solution:**
+- **Problem**: Tests passed locally but failed in GitHub Actions (Chrome headless issue)
+- **Solution**: Added environment detection in `WebDriverConfig.java` with headless Chrome config and Linux-specific options (`--no-sandbox`, `--disable-dev-shm-usage`)
+- **Result**: ✅ Fully automated pipeline with Allure reporting
+- **Skills**: GitHub Actions, Selenium headless config, CI/CD debugging, root cause analysis
 
 ### ✅ "Collaboration & Communication"
 **Our approach:**
