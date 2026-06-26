@@ -63,6 +63,23 @@ Rather than a generic test suite, this framework demonstrates:
 - **Result**: ✅ Fully automated pipeline with Allure reporting
 - **Skills**: GitHub Actions, Selenium headless config, CI/CD debugging, root cause analysis
 
+### Allure Report Generation & GitHub Pages Deployment
+
+**Workflow Architecture:**
+1. **test job** → Runs 11 automated tests
+2. **report job** → Generates Allure report using Allure CLI
+   - Installs: `npm install -g allure-commandline`
+   - Generates: `allure generate allure-results --clean -o allure-report`
+3. **deploy job** → Publishes to GitHub Pages
+
+**Why Allure CLI (not Maven plugin):**
+- ✅ Industry standard approach for QA projects
+- ✅ Generates proper `index.html` for GitHub Pages
+- ✅ Creates interactive dashboards with charts, trends, history
+- ✅ Works on CI/CD environments (GitHub Actions)
+
+**Result:** Live dashboard at: https://khine282.github.io/banking-app-e2e-test-suite/
+
 ### ✅ "Collaboration & Communication"
 **Our approach:**
 - Professional README (this document)
