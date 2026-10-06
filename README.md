@@ -1,6 +1,6 @@
 # 🏦 Banking App E2E Test Suite
 
-[![CI/CD Pipeline](https://github.com/yourusername/banking-app-e2e-test-suite/actions/workflows/run-tests.yml/badge.svg)](https://github.com/yourusername/banking-app-e2e-test-suite/actions)
+[![CI/CD Pipeline](https://github.com/khine282/banking-app-e2e-test-suite/actions/workflows/banking-tests.yml/badge.svg)](https://github.com/khine282/banking-app-e2e-test-suite/actions/workflows/banking-tests.yml)
 [![Java 17](https://img.shields.io/badge/Java-17-blue)](https://www.java.com/)
 [![Selenium 4.15](https://img.shields.io/badge/Selenium-4.15-brightgreen)](https://www.selenium.dev/)
 [![TestNG 7.9](https://img.shields.io/badge/TestNG-7.9-yellowgreen)](https://testng.org/)
@@ -28,29 +28,28 @@ Rather than a generic test suite, this framework demonstrates:
 ## 🏗️ Banking QA Engineering Competencies Demonstrated
 
 ### ✅ "Test Case Design & Execution"
-**Our approach:**
+**My approach:**
 - `/test-artifacts/TEST_PLAN.md` — Comprehensive test plan for fund transfer feature
 - `/test-artifacts/TEST_CASES.md` — 14 detailed test cases with preconditions and expected results
 - Tests cover: Functional, Negative, Edge Cases, Regression
 - **Proof**: Professional test documentation before implementation
 
 ### ✅ "Test Automation (Selenium, JUnit/TestNG)"
-**Our approach:**
+**My approach:**
 - **Framework**: Java 17, TestNG, Selenium WebDriver 4.15
 - **Pattern**: Page Object Model for maintainability
-- **Tests**: 12 automated test cases (LoginTests, TransferTests, RegressionTests)
+- **Tests**: 11 automated test cases (LoginTests, TransferTests, RegressionTests)
 - **Example**: Automates complete banking workflow (login → transfer → balance check)
 
 ### ✅ "Defect Management (JIRA-style tracking)"
-**Our approach:**
-- `ISSUES.md` — Professional defect reports with JIRA structure
+**My approach:**
+- `/test-artifacts/DEFECT_TEMPLATE.md` — JIRA-style defect report template
 - Includes: Summary, Steps to Reproduce, Expected vs Actual, Root Cause
-- **5 real defects** documented (decimal precision, validation gaps, UX improvements)
-- Each defect shows: Severity, Impact, Test Case linkage, Acceptance Criteria
+- Each defect captures: Severity, Impact, Test Case linkage, Acceptance Criteria
 
 ### ✅ CI/CD & Continuous Testing
 
-**Our approach:**
+**My approach:**
 - `.github/workflows/banking-tests.yml` — GitHub Actions pipeline
 - Runs on: Every push to main/develop branches
 - **Green badge** in README proves tests passing
@@ -81,7 +80,7 @@ Rather than a generic test suite, this framework demonstrates:
 **Result:** Live dashboard at: https://khine282.github.io/banking-app-e2e-test-suite/
 
 ### ✅ "Collaboration & Communication"
-**Our approach:**
+**My approach:**
 - Professional README (this document)
 - Semantic git commits (`feat:`, `test:`, `fix:`)
 - Clear code documentation
@@ -96,7 +95,7 @@ Rather than a generic test suite, this framework demonstrates:
 | **Login & Authentication** | ✓ Valid creds | — | ✓ Empty fields | ✓ 3 tests | Static |
 | **Fund Transfer** | ✓ Success | ✓ Insufficient* | ✓ Decimal amounts | ✓ 5 tests | **Dynamic (High→Low)** |
 | **Balance Inquiry** | ✓ Display | ✓ Not found | ✓ Large amounts | ✓ 2 tests | Dynamic |
-| **Regression** | ✓ Consistency | — | — | ✓ 2 tests | Dynamic |
+| **Regression** | ✓ Consistency | — | — | ✓ 1 test | Dynamic |
 | **TOTAL** | **5 tests** | **2 tests** | **3 tests** | **11 tests** | **Smart Selection** |
 
 *Demo site allows insufficient balance transfers (production banking would reject)
@@ -110,7 +109,7 @@ Rather than a generic test suite, this framework demonstrates:
 | **Language** | Java 17 | Industry standard, strong typing |
 | **Test Framework** | TestNG 7.9 | Better than JUnit, parallel execution |
 | **UI Automation** | Selenium WebDriver 4.15 | De-facto standard for web testing |
-| **API Testing** | REST Assured | Clean, fluent assertions for APIs |
+| **API Testing** | REST Assured | API client in place; API tests planned |
 | **Build Tool** | Maven | Universal Java build tool |
 | **CI/CD** | GitHub Actions | Free, integrated with repo |
 | **Reporting** | Allure | Professional HTML reports with metrics |
@@ -126,7 +125,6 @@ banking-app-e2e-test-suite/
 │
 ├── README.md                          ← You are here
 ├── pom.xml                            ← Maven dependencies
-├── ISSUES.md                          ← Defects found (JIRA-style)
 │
 ├── test-artifacts/                    ← TEST CASE DOCUMENTATION
 │   ├── TEST_PLAN.md                   ← Comprehensive test strategy
@@ -135,7 +133,7 @@ banking-app-e2e-test-suite/
 │
 ├── .github/
 │   └── workflows/
-│       └── run-tests.yml              ← GitHub Actions CI/CD
+│       └── banking-tests.yml          ← GitHub Actions CI/CD
 │
 ├── src/main/java/com/parabank/banking/
 │   ├── config/
@@ -150,7 +148,7 @@ banking-app-e2e-test-suite/
 │
 └── src/test/java/com/parabank/banking/
     ├── BaseTest.java                  ← Test setup/teardown
-    ├── LoginTests.java                ← 4 login test cases
+    ├── LoginTests.java                ← 3 login test cases
     ├── TransferTests.java             ← 5 transfer test cases
     ├── RegressionTests.java           ← 3 regression test cases
     └── resources/
@@ -376,7 +374,7 @@ Every `git push` triggers automated testing in GitHub Actions:
 1. Code compilation (Java 17)
 2. Dependency download (Maven)
 3. Chrome installation
-4. All 12 tests execution
+4. All 11 tests execution
 5. Allure report generation
 
 **Green badge** in README = All tests passing ✓
@@ -402,48 +400,10 @@ Tests execute with pauses for demos
 
 ---
 
-## 🎓 What Banking QA Hiring Managers See
-
-| Skill | Evidence | Assessment |
-|-------|----------|-----------|
-| **Test Design** | TEST_PLAN.md, TEST_CASES.md | ✅ Professional |
-| **Automation** | Clean code, POM pattern | ✅ Industry standard |
-| **Defect Management** | ISSUES.md | ✅ Realistic documentation |
-| **Java Knowledge** | Page objects, API code | ✅ Solid skills |
-| **CI/CD** | GitHub Actions | ✅ Modern pipelines |
-| **Git Discipline** | Semantic commits | ✅ Professional workflow |
-| **Banking Domain** | Edge cases, constraints | ✅ Domain knowledge |
-| **Dynamic Test Data** | Balance-based selection | ✅ Sophisticated design |
-| **Error Handling** | TC_003, TC_004 | ✅ Production thinking |
-
----
-
-## 💡 Interview Talking Points
-
-### 1. Test Design Thinking
-"I design tests around real banking constraints: sufficient balance, valid recipients, decimal precision."
-
-### 2. Smart Test Data
-"Rather than hardcoding account IDs, I dynamically select by balance—essential for production systems."
-
-### 3. Defect Management
-"I document issues professionally with reproduction steps and business impact (see ISSUES.md)."
-
-### 4. Framework Readiness
-"The framework works on demo sites now, but scales to production banking systems with complex validation."
-
-### 5. CI/CD Understanding
-"Every code change triggers automated testing 24/7, preventing regression before production."
-
-### 6. Day One Approach
-"I'd review requirements, design test plans around regulatory constraints, then scale this framework for production systems."
-
----
-
 ## 📄 License
 
 MIT License — Feel free to fork for your portfolio.
 
 ---
 
-**Built with ❤️ for QA professionals targeting banking roles.**
+**Khine Zar Thwe** · [LinkedIn](https://www.linkedin.com/in/khine-zar-thwe-282kzt/) · [Portfolio](https://kaizarthwe.com) · [GitHub](https://github.com/khine282)

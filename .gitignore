@@ -10,3 +10,6 @@ surefire-reports/
 *.log
 node_modules/
 build/
+
+# Allure CLI (installed in CI via npm)
+.allure/
